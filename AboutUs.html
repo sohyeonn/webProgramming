@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ASV</title>
+	<style>
+	::-webkit-scrollbar { width : 10px; }
+	::-webkit-scrollbar-thumb { background : #58c9b9;}
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+	}
+
+
+	.footer {
+		background-color: #f1f1f1;
+		padding: 10px;
+		text-align: center;
+	}
+
+
+
+	@media screen and (max-width:1230px) {
+		.resize {
+			display:none;
+		}
+	}
+
+
+	.topnav {
+		overflow: hidden;
+		background-color: #00aa66;
+		position: fixed;
+		top: 0;
+		width : 100%;
+	}
+
+	.topnav a {
+		width : 200px;
+		float: right;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 40px;
+		text-decoration: none;
+	}
+
+	.topnav a:hover, .dropdown:hover .dropbtn {
+		background-color: #008866
+	}
+
+
+
+
+	.dropdown {
+		float: right;
+		overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+		width : 200px;
+		font-size: 16px;    
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 40px;
+		background-color: inherit;
+		font-family: inherit;
+		margin: 0;
+	}
+	.dropdown-content {
+		display: none;
+		background-color: #008866;
+		min-width: 200px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+
+		position : fixed;
+		top : 47px;
+	}
+	.dropdown-content a {
+		float: none;
+		color : white;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {
+		background-color : rgba(25,42,12,1);
+		color : #008866;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+
+
+	@keyframes kfMainTopNavNavButton
+	{
+		0%
+		{
+
+
+		}
+		100%
+		{
+			background-color : #008866;
+		}
+	}
+
+
+	.Parallax1
+	{
+		min-height: 1300px; 
+		
+		background-image: url("https://bit.ly/2smDEOb");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.Parallax2
+	{
+		min-height: 400px; 
+		
+		background-image: url("https://bit.ly/2LbiPfK");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.Parallax3
+	{
+		min-height: 400px; 
+		
+		background-image: url("https://bit.ly/2kFyOHH");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.Parallax4
+	{
+		min-height: 400px; 
+		
+		background-image: url("https://bit.ly/2ssm9fF");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.Parallax5
+	{
+		min-height: 1300px; 
+		
+		background-image: url("https://bit.ly/2J3vYKY");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.ParallaxCon
+	{
+		padding : 50px 80px;
+		background-color:#00aa88;
+		font-size:20px;
+		text-align : center;
+		text-align : justify;
+	}
+
+	.Arrow {
+		color: #fff;
+		position: fixed;
+		width : 50%;
+		bottom : 50px;
+		opacity: 0.7;
+		text-shadow: 0 0 6px rgba(0,0,0,0.5);
+		font-size: 20px;
+		width: 60px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 10px;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -30px;
+		animation: bounce 1s ease infinite;
+	}
+
+	@keyframes bounce {
+		50% {
+			transform: translateY(-50%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+
+</style>
+</head>
+</html>
+
+
+
+
+<body>
+	<div class="topnav">
+		<a href="Visit.html">Visit</a>
+
+		<a href="Community.html">Community</a>
+
+		<div class="dropdown">
+			<button class="dropbtn">Gallery 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="Image.html">Image1</a>
+				<a href="Image2.html">Image2</a>
+				<a href="Image3.html">Image3</a>
+			</div>
+		</div> 
+
+		<div class="dropdown">
+			<button class="dropbtn">Video 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="Video.html">Video1</a>
+				<a href="Video2.html">Video2</a>
+			</div>
+		</div> 
+
+		<a href="AboutUs.html">About Us</a>
+		<a href="HomeTmp.html">Home</a>
+
+
+	</div>
+
+
+
+
+
+	<div class = "Arrow">
+		╲╱
+	</div>
+
+	<div class="Parallax1"></div>
+	<div class = "ParallaxCon">
+		멸종위기 야생생물 개념<br>
+		° 멸종위기 야생생물은 자연적으로 또는 인위적 위협요인으로 개체수가 크게 줄어들고 있거나 현재의 위협 요인이 제거 또는 완화되지 아니할 경우 가까운 장래에 멸종위기에 처할 우려가 있는 야생생물로서 환경부장관이 정하는 종을 말한다.<br>
+		- 멸종위기 야생생물 1급 : 자연적 또는 인위적 위협요인으로 개체수가 크게 줄어들어 멸종위기에 처한 종<br>
+		- 멸종위기 야생생물 Ⅱ급 : 자연적 또는 인위적 위협요인으로 개체수가 크게 줄어들고 있어 현재의 위협요인이 제거되거나 완화되지 않을 경우 가까운 장래에 멸종위기에 처할 우려가 있는 종
+	</div>
+
+	<div class="Parallax2"></div>
+	<div class = "ParallaxCon">
+		멸종위기 야생동물 1급에는 포유류 11종 조류 12종 양서류 1종 파충류 1종 어류 9종 곤충류 4종 무척추동물 4종 육상식물 9종 총 51종이 있다.
+	</div>
+
+	<div class="Parallax3"></div>
+	<div class = "ParallaxCon">
+		° 멸종위기 야생생물 지표는 생태계의 건강성을 보여주는 척도의 하나로 기능<br>
+		- 특정한 종이 멸종위기에 처할 경우 그 종의 기능이 약화되고, 그 영향은 먹이사슬 전반으로 파급되어 결국 생태계 내 생물종 다양성을 저해하여 생태계의 균형 파괴<br>
+		- 멸종위기 야생생물을 지표로 관리하는 최종 목적은 멸종위기종 지정이 아니라 해제<br>
+		° 멸종위기 야생생물의 보호관리를 통해 생물종의 멸종을 예방<br>
+		° 적극적인 멸종위기 야생생물의 증식·복원을 통해 생물다양성을 보전하고 건강한 생태계를 회복<br>
+		- 증식·복원을 통해 멸종위기 야생동·식물의 존속이 보장되어야 그 종이 서식하는 넓은 서식권 내 다양한 동·식물종의 생존도 담보 가능
+	</div>
+
+	<div class="Parallax4"></div>
+	<div class = "ParallaxCon">
+		멸종위기 야생생물에는 멸종위기 야생생물, 먹는 것이 금지되는 야생동물, 포획·채취 등의 금지 야생생물, 유해야생동물, 수렵동물, 생태계교란 야생생물, 야생화된 동물, 수출·수입등 허가대상 야생생물, 국제적멸종위기종(CITES해당종), 국외반출 승인대상 생물자원, 인공증식 또는 재배를 위한 포획·채취 등의 허가대상 
+		야생생물로 구성되어 있다.
+	</div>
+	<div class="Parallax5"></div>
+
+	<script>
+
+		$(function(){
+			$(".Parallax5").css("background","gold");
+		});
+
+	</script>
+
+</body>

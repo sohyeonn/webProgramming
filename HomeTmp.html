@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <title>ASV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+    ::-webkit-scrollbar { width : 10px; }
+    ::-webkit-scrollbar-thumb { background : #58c9b9;}
+
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+  }
+
+  .Body
+  {
+   max-width : 1500px;
+
+   margin : auto;
+}
+
+
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #00aa66;
+}
+
+.topnav a {
+    width : 200px;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #008866
+}
+
+
+
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    width : 200px;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 40px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #008866;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color : white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color : rgba(25,42,12,1);
+    color : #008866;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+@keyframes kfMainTopNavNavButton
+{
+    0%
+    {
+
+
+    }
+    100%
+    {
+        background-color : #008866;
+    }
+}
+
+
+
+.Homecolumn {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+.Homerow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:1300px) {
+    .Homecolumn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .Homecolumn {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ImgSlide2ConCon p
+{
+    color : green;
+    font-size : 2em;
+    margin-bottom : 20px;
+}
+.ImgSlide2ConCon
+{
+    margin-bottom : 50px;
+}
+.ImgSlide2Con
+{
+    position  : relative;
+    
+    width : 100%;
+}
+.ImgSlide2Con img 
+{
+
+    margin : auto;
+    width : 80%;
+    height : 300px;
+
+}
+.ImgSlide2Con .slides
+{
+    animation-name : kfZoomInLeft;
+    animation-duration : 1s;
+}
+
+.prev, .next
+{
+    z-index : 1;
+    cursor : pointer;
+    position : absolute;
+    top : 50%;
+    font-size : 20px;
+    font-weight : bold;
+    padding : 10px;
+    margin : 10px;
+    color : #00aa66;
+    transition : transform .3s;
+    margin-top: -20px;
+}
+.next
+{
+
+    right : 0px;
+}
+.prev:hover, .next:hover
+{
+    transform : scale(1.5); 
+    animation-name : kfButton;
+    animation-duration : 1s;
+}
+
+@keyframes kfZoomInLeft 
+{
+    from 
+    {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    60% 
+    {
+        opacity: 1;
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+@keyframes kfButton
+{
+    0%{background-color : rgba(0,0,0,0);}
+    30%{background-color : rgba(0,0,0,0.5);}
+    100%{background-color : rgba(0,0,0,0);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.HomeArticle
+{
+    margin-bottom : 100px;
+
+}
+.HomeArticle p
+{
+    color : green;
+    font-size : 2em;
+
+}
+.HomeArticle table
+{       
+
+    width : 90%;
+    font-size : 10px;
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+}
+
+.HomeArticle table th 
+{
+    width: 10%;
+    height : 20px;
+    padding: 8px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+.HomeArticle table td
+{
+    width: 60%;
+    height : 20px;
+    padding: 8px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+.HomeArticle:nth-child(2) {top:1500px;}
+
+
+
+
+
+
+
+
+.HomeCon
+{
+
+}
+.HomeCon > p
+{
+    color : green;
+    font-size : 2em;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  
+  margin-bottom: 40px;
+  padding: 0 8px;
+
+  transition : transform 1s;
+}
+.column:hover
+{
+    transform : scale(1.1, 1.1);
+    cursor : pointer;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+}
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow : hidden;
+}
+
+.card img
+{ 
+    height : 100px;
+}
+
+.container {
+    position : relative;
+    padding: 0 16px;
+    height : 180px;
+
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text {
+   font-size : 10px;
+   color: grey;
+
+}
+
+.button {
+    position  :absolute;
+    bottom : 5px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #00aa66;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+.Button button {
+    margin-top : 10px;
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 102px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Button button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.Button button:hover
+{
+    background-color : #90EE90;
+}
+.Button button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+
+
+
+.ImgSlide 
+{
+    margin : 30px auto;
+    width : 800px;
+    height : 200px;
+    position : relative;
+    overflow : hidden;
+
+}
+.ImgSlide > ul 
+{
+    list-style-type: none;
+    margin : 0;
+    padding : 0;
+    width : 400%;
+    height : 100%;
+    transition : 1.5s;
+
+}
+.ImgSlide > ul:after {content : ""; display:block; clear:both;}
+.ImgSlide li
+{
+    float: left;
+    width : 25%;
+    height : 100%;
+}
+.ImgSlide li:nth-child(1) {background-color : red;}
+.ImgSlide li:nth-child(2) {background-color : yellow;}
+.ImgSlide li:nth-child(3) {background-color : blue;}
+.ImgSlide li:nth-child(4) {background-color : purple;}
+.ImgSlide #slide1:checked~ul {margin-left : 0%;}
+.ImgSlide #slide2:checked~ul {margin-left : -100%;}
+.ImgSlide #slide3:checked~ul {margin-left : -200%;}
+.ImgSlide #slide4:checked~ul {margin-left : -300%;}
+
+.ImgSlide input{  display : none;  }
+.ImgSlide label
+{
+    display : inline-block;
+    width : 20px;
+    height : 20px;
+    vertical-align : middle;
+    background-color : white;
+    border : 3px solid #49c4b5;
+    border-radius : 50%;
+    cursor : pointer;
+    transition : 0.2s;
+
+
+}
+.ImgSlide .Selector
+{
+    position : absolute;
+    bottom : 20px;
+    text-align : center;
+    width : 100%;
+}
+.ImgSlide #slide1:checked~.Selector>label:nth-child(1){background-color : black;}
+.ImgSlide #slide2:checked~.Selector>label:nth-child(2){background-color : black;}
+.ImgSlide #slide3:checked~.Selector>label:nth-child(3){background-color : black;}
+.ImgSlide #slide4:checked~.Selector>label:nth-child(4){background-color : black;}
+
+.ImgSlide img {width : 100%; height : 100%;}
+
+
+
+
+
+
+
+
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    font-size : 20px;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+    <div class="header">
+      <h1>ASV</h1>
+      <p>멸종위기 동식물에 대해 알아보고 홍보하고 의견을 나누는 사이트입니다.</p>
+      <?php
+      if(isset($_COOKIE["id"])){
+      echo "<button onclick='location.href=\"logout.php\"'>로그아웃</button>";
+  }
+  else {
+  echo "<button onclick='location.href=\"login.html\"'>로그인</button>";
+}
+?>
+
+<button onclick="location.href='register.html'">회원가입</button>
+<?php  
+if(isset($_COOKIE["id"]))  {
+echo '<p >';
+    echo $_COOKIE["id"];
+echo '님 환영합니다. </p>';
+}
+?>
+</div> 
+
+
+
+<div class="topnav">
+  <a href="Visit.html">Visit</a>
+
+  <a href="Community.html">Community</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Gallery 
+      <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="Image.html">Image1</a>
+    <a href="Image2.html">Image2</a>
+    <a href="Image3.html">Image3</a>
+</div>
+</div> 
+
+<div class="dropdown">
+    <button class="dropbtn">Video 
+      <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="Video.html">Video1</a>
+    <a href="Video2.html">Video2</a>
+</div>
+</div> 
+
+<a href="AboutUs.html">About Us</a>
+<a href="HomeTmp.html">Home</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class = "banner">
+    <div class = "ImgSlide">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <ul>
+            <li><img src="https://bit.ly/2LQO1C6" alt="" ></li>
+            <li><img src="https://bit.ly/2JlGahf" alt=""></li>
+            <li><img src="https://bit.ly/2J6X00e" alt=""></li>
+            <li><img src="https://bit.ly/2kExHYL" alt=""></li>
+        </ul>
+
+        <p class = "Selector">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class = "Body">
+
+    <div class="Homerow">
+      <div class="Homecolumn">
+
+        <div class="ImgSlide2ConCon">
+            <p>Best Images</p>
+            <div class="ImgSlide2Con">
+
+                <a class="prev" onclick="plusSlide(-1)">&#9665</a>
+                <a class="next" onclick="plusSlide(1)">&#9655</a>
+
+                <img class = "slides" src="https://bit.ly/2LeL39j" alt="">
+                <img class = "slides" src="https://bit.ly/2JnuA5w" alt="">
+                <img class = "slides" src="https://bit.ly/2J5CbGn" alt="">
+                <img class = "slides" src="https://bit.ly/2JmGDzK" alt="">
+            </div>
+        </div>
+
+
+
+        <div class = "VideoCon" style="width: 100%;">
+
+            <p style = "color : green; font-size: 2em;"> Best Videos</p>
+
+            <iframe src="https://www.youtube.com/embed/X5mJkYsTVno" frameborder="0" name = "ifr" style = " position : relative; width : 90%; height : 300px;  display : block;  margin : auto;"></iframe>
+
+            <div class="Button" style="margin-left:22px;">
+              <a href="https://www.youtube.com/embed/X5mJkYsTVno" target="ifr"><button class = "but"><span>1</span></button></a>
+              <a href="https://www.youtube.com/embed/xdNQh8rb7jo" target="ifr"><button class = "but" style = ""><span>2</span></button></a>
+              <a href="https://www.youtube.com/embed/Cx1aA_csZd4" target="ifr"><button class = "but" style = ""><span>3</span></button></a>
+              <a href="https://www.youtube.com/embed/WyNeoEYrXZs" target="ifr"><button class = "but" style = ""><span>4</span></button></a>
+          </div>
+      </div>
+
+  </div>
+
+
+
+
+  <div class="Homecolumn">
+    <div class = "HomeArticle">
+        <p> Notice</p>
+        <table>
+            <tr>
+                <th scope="row"><B style='font-size:15px'>번호</B></th>
+                <td><B style='font-size:15px'>게시물</B></td>
+            </tr>
+            <?php include 'hboard.php'; ?>
+        </table>
+    </div>
+
+    <div class = "HomeArticle">
+        <p> FAQ</p>
+        <table>
+            <tr>
+                <th scope="row">8</th>
+                <td><div class="popup" onclick="myFunction()">동물보호교육은 어떤 내용인가요?
+                  <span class="popuptext" id="myPopup"><b>A :</b><br> 어린 시절의 다양한 인성 교육은 어른으로 성장하는 과정에 잘못된 경험으로 왜곡될 수 있는 인성의 뿌리를 튼튼하게 해 줄 수 있습니다.<br> 동물의 생명을 존중하며 연민을 가지고 보호하려는 태도는 동물뿐만 아니라 인간을 포함한 모든 생명체에 대한 의식의 변화도 가져올 수 있습니다.</span>
+              </div></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td><div class="popup" onclick="myFunction()">후원하는 방법을 알려주세요!
+              <span class="popuptext" id="myPopup"><b>A :</b><br> <a href="https://www.wwfkorea.or.kr/‎">www.wwfkorea.or.kr/‎</a> 에서 후원을 신청하실 수 있습니다.</span>
+          </div></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td><div class="popup" onclick="myFunction()">동물 봉사활동을 하려면 자격이 필요한가요?
+          <span class="popuptext" id="myPopup"><b>A :</b><br> ・ 20세 이상의 신체 건강하신 분<br>
+・ 동물보호에 관심이 있고, 동물을 사랑하시는 분<br>
+・ 파상풍 예방접종이 되신 분<br>
+・ 봉사활동 관련 주의사항을 모두 숙지, 동의 하신 분<br>
+
+위에 모두 해당하는 분이라면 누구나 가능합니다.</span>
+      </div></td>
+  </tr>
+  <tr>
+    <th scope="row">8</th>
+    <td><div class="popup" onclick="myFunction()">멸종위기 및 보호야생동식물 지정 현황이 궁금해요!
+      <span class="popuptext" id="myPopup"><b>A :</b><br><a href="http://www.me.go.kr/ysg/web/index.do?menuId=7015"> http://www.me.go.kr/ysg/web/index.do?menuId=7015</a><br>에서 확인하실 수 있습니다.</span>
+  </div></td>
+</tr>
+<tr>
+    <th scope="row">8</th>
+    <td><div class="popup" onclick="myFunction()">야생생물 보호 및 관리에 관한 법률에 대해 알려주세요!
+      <span class="popuptext" id="myPopup"><b>A :</b><br> <a href="http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%95%BC%EC%83%9D%EC%83%9D%EB%AC%BC%EB%B3%B4%ED%98%B8%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0">http://www.law.go.kr</a><br>에서 확인하실 수 있습니다.</span>
+  </div></td>
+</tr>
+<tr>
+    <th scope="row">8</th>
+    <td><div class="popup" onclick="myFunction()">동물보호법 시행령이 개정되면서 달라진 점은 무엇인가요?
+      <span class="popuptext" id="myPopup"><b>A :</b><br> <a href="http://www.dailyvet.co.kr/news/policy/92083">http://www.dailyvet.co.kr/news/policy/92083</a><br>에서 확인하실 수 있습니다.</span>
+  </div></td>
+</tr>
+<tr>
+    <th scope="row">8</th>
+    <td><div class="popup" onclick="myFunction()">멸종위기야생동식물은 어떻게 지정되나요?
+      <span class="popuptext" id="myPopup"><b>A :</b><br> 멸종위기 야생생물 목록(야생생물법 시행규칙 별표1)이 2017년 12월 29일 개정됨에 따라 
+신규지정된 멸종위기 야생생물을 보관하고 있던 국민은 2018년 12월 28일(1년 이내) 보관신고를 하여야 합니다. 
+ 
+<br>
+(관련법)
+  ㅇ「야생생물 보호 및 관리에 관한 법률(이하 야생생물법)」 제14조 제5항
+  ㅇ 같은 법 시행규칙 제18조(멸종위기 야생생물의 보관신고)
+<br>
+(신고대상) 
+
+  ㅇ 야생생물이 멸종위기 야생생물로 정하여질 당시에 그 야생생물 또는 박제품(표본 등 죽은 것 포함)을 보관하고 있는 국민
+  ※ 금번 신고대상은 신규지정종 25종(붙임2 참조) 보관자에 한함
+<br>
+(제출서류) 
+
+  ㅇ 별지 제14호 서식(보관신고서)
+  ㅇ 보관하고 있는 멸종위기 야생생물 또는 그 박제품의 사진
+      (신규지정 전 보관하고 있음을 확인할 수 있는 사진 상세정보 필요)
+  ㅇ 보호시설의 도면 또는 사진(보호시설이 필요한 생물만 해당)
+</span>
+  </div></td>
+</tr>
+<tr>
+    <th scope="row">8</th>
+    <td><div class="popup" onclick="myFunction()">멸종위기 종 증식복원 종합계획에 대해 궁금해요!
+      <span class="popuptext" id="myPopup"><b>A :</b><br> 멸종위기종 복원 컨트롤타워, 2017년 출범<br>
+
+
+반달가슴곰, 산양, 황새 등 환경부 지정 멸종위기종, <br>
+야생에 성공적으로 적응하고 있거나 증식기술 개발 완료<br>
+핵심 종 확보, 종 복원 연구 등을 총괄하는 국가연구기관<br>
+‘국립멸종위기종복원센터(가칭)’ 2016년 말 경북 영양 설치</span>
+  </div></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="Homecolumn">
+
+
+    <div class = "HomeCon">
+        <p>Article1</p>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img src="https://bit.ly/2xysVVW" alt="Jane" style="width:100%">
+              <div class="container">
+                <p class="text">
+                Cat lovers at Google are to blame for dwindling burrowing owl population, say wildlife activists</p>
+                <p><a href="https://www.telegraph.co.uk/news/2018/05/28/cat-lovers-google-blame-dwindling-burrowing-owl-population-say/"><button class="button">more</button></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <img src="https://bit.ly/2Lc5qnv" alt="Mike" style="width:100%">
+          <div class="container">
+            <p class="text">
+            Hunters wage war on Burmese pythons in Florida Everglades</p>
+            <p><a href="https://www.telegraph.co.uk/news/2018/05/27/hunters-wage-war-burmese-pythons-florida-everglades/"><button class="button">more</button></a></p>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="https://bit.ly/2suFVpT" alt="John" style="width:100%">
+      <div class="container">
+        <p class="text">US moves to lift Obama-era curbs on killing hibernating bear cubs in Alaska</p>
+        <a href="https://www.telegraph.co.uk/news/2018/05/22/us-moves-lift-obama-era-curbs-killing-hibernating-bear-cubs/"><button class="button">more</button></a>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div class = "HomeCon">
+    <p>Article2</p>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+            <img src="https://bit.ly/2xvZaoT" alt="Jane" style="width:100%">
+            <div class="container">
+                <p class="text">Bison released into the Carpathian Mountains in bid to re-establish iconic species in Romania</p>
+                <p><a href="https://www.telegraph.co.uk/news/2018/05/22/bison-released-carpathian-mountains-bid-re-establish-iconic/"><button class="button">more</button></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+           <img src="https://bit.ly/2LcPkKt" alt="Jane" style="width:100%">
+           <div class="container">
+            <p class="text">‘Road network’ for insects could be created across Britain to protect bees, butterflies and moths</p>
+            <p><a href="https://www.telegraph.co.uk/science/2018/05/09/road-network-insects-could-created-across-britain-protect-bees/"><button class="button">more</button></a></p>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+       <img src="https://bit.ly/2LO92gF" alt="Jane" style="width:100%">
+       <div class="container">
+        <p class="text">Plans to build homes on nightingale sanctuary threaten all Britain's wildlife havens, warn experts </p>
+        <p><a href="https://www.telegraph.co.uk/science/2018/05/06/plans-build-homes-nightingale-sanctuary-threaten-britains-wildlife/"><button class="button">more</button></a></p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="footer">
+    <div style="margin:auto; width:20%;">
+        <img src="https://bit.ly/2Iwg4sC" alt="" width=50px height=50px style="float:left;">
+        <p>세종대학교 웹프로그래밍</p>
+        <p>김준한, 한제완, 윤소현</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlide(n)
+    {
+        showSlides(slideIndex += n);
+    }
+    function showSlides(n)
+    {
+        var slides = document.getElementsByClassName("slides");
+        if (n < 1) {slideIndex = slides.length; }
+        if (n > slides.length) {slideIndex = 1;}
+
+        var i;
+        for(i = 0; i<slides.length; i++) {slides[i].style.display = "none"; }
+            slides[slideIndex-1].style.display = "block";
+    }
+
+
+
+    var popup = document.getElementsByClassName("popup");
+    var popuptext = document.getElementsByClassName("popuptext");
+
+    for(k=0; k<popup.length; k++)
+    {
+        {(function(j){
+            popup[k].onclick = function(){
+                popuptext[j].classList.toggle("show");
+            }
+        })(k);
+    }
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+    ::-webkit-scrollbar { width : 10px; }
+    ::-webkit-scrollbar-thumb { background : #58c9b9;}
+
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+  }
+  .Body
+  {
+   max-width : 1500px;
+
+   margin : auto;
+}
+
+
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #00aa66;
+}
+
+.topnav a {
+    width : 200px;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #008866
+}
+
+
+
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    width : 200px;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 40px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #008866;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color : white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color : rgba(25,42,12,1);
+    color : #008866;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+@keyframes kfMainTopNavNavButton
+{
+    0%
+    {
+
+
+    }
+    100%
+    {
+        background-color : #008866;
+    }
+}
+
+
+
+
+
+
+
+
+.Homerow > .Homecolumn {
+  padding: 0 8px;
+}
+
+.Homerow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Homecolumn {
+  float: left;
+  width: 20%;
+}
+
+.Homerow > p
+{
+    color : green;
+    font-size : 2em;
+    text-align : center;
+}
+
+
+
+
+
+.ImgGal
+{
+
+    width : 90%;
+    margin : 20px auto;
+    border : 0.3px solid black;
+    transition : transform 1s
+}
+.ImgGal:hover
+{
+    animation-name : kfImgGal;
+    animation-duration : 1s;
+    animation-fill-mode : forwards;
+    transform : scale(1.2, 1.2);
+    cursor : pointer;
+}
+.ImgGal > img
+{
+    width : 100%;
+    padding : 10px;
+}
+.ImgGal > .ImgGalDesc
+{
+    padding : 10px;
+    text-align : center;
+}
+
+@keyframes kfImgGal
+{
+    0%
+    {
+        opacity : 1;
+
+    }
+    100%
+    {
+        opacity : 0.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+
+
+  <div class="topnav">
+      <a href="Visit.html">Visit</a>
+
+      <a href="Community.html">Community</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Gallery 
+          <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Image.html">Image1</a>
+        <a href="Image2.html">Image2</a>
+        <a href="Image3.html">Image3</a>
+    </div>
+</div> 
+
+<div class="dropdown">
+    <button class="dropbtn">Video 
+      <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="Video.html">Video1</a>
+    <a href="Video2.html">Video2</a>
+</div>
+</div> 
+
+<a href="AboutUs.html">About Us</a>
+<a href="HomeTmp.html">Home</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class= "Body">
+
+
+    <div class="Homerow">
+        <p>포유류</p>
+        <div class="Homecolumn">
+          <div class = 'ImgGal'>
+            <img class = "myImg" src="https://bit.ly/2Jlb6hF" alt="붉은박쥐">
+            <div class = "ImgGalDesc">
+                붉은박쥐
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Homecolumn">
+      <div class = 'ImgGal'>
+        <img class = "myImg" src="https://bit.ly/2LRuZeL" alt="늑대">
+        <div class = "ImgGalDesc">
+            늑대
+        </div>
+
+    </div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2snjmE7" alt="여우">
+    <div class = "ImgGalDesc">
+        여우
+    </div>
+
+</div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2LeL39j" alt="표범">
+    <div class = "ImgGalDesc">
+        표범
+    </div>
+
+</div>
+</div>
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2J3Zc8C" alt="호랑이">
+    <div class = "ImgGalDesc">
+        호랑이
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div><hr></div>
+
+
+
+<div class="Homerow">
+    <p>포유류</p>
+    <div class="Homecolumn">
+      <div class = 'ImgGal'>
+        <img class = "myImg" src="https://bit.ly/2J1ISJM" alt="수달">
+        <div class = "ImgGalDesc">
+            수달
+        </div>
+
+    </div>
+</div>
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2IYDWFg" alt="바다사자">
+    <div class = "ImgGalDesc">
+        바다사자
+    </div>
+
+</div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2kJk9Ln" alt="반달사슴곰">
+    <div class = "ImgGalDesc">
+        반달사슴곰
+    </div>
+
+</div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2LdBDek" alt="사향노루">
+    <div class = "ImgGalDesc">
+        사향노루
+    </div>
+
+</div>
+</div>
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2Ldns98" alt="산양">
+    <div class = "ImgGalDesc">
+        산양
+    </div>
+
+</div>
+</div>
+</div>
+
+<div><hr></div>
+
+<div class="Homerow">
+    <p>양서/파충류</p>
+    <div class="Homecolumn">
+      <div class = 'ImgGal'>
+        <img class = "myImg" src="https://bit.ly/2sou8tQ" alt="금개구리">
+        <div class = "ImgGalDesc">
+            금개구리
+        </div>
+
+    </div>
+</div>
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2kE0FrH" alt="맹꽁이">
+    <div class = "ImgGalDesc">
+        맹꽁이
+    </div>
+
+</div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2xEmlNU" alt="남생이">
+    <div class = "ImgGalDesc">
+        남생이
+    </div>
+
+</div>
+</div>
+
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2svsExm" alt="구렁이(먹구렁이)">
+    <div class = "ImgGalDesc">
+        구렁이(먹구렁이)
+    </div>
+
+</div>
+</div>
+
+<div class="Homecolumn">
+  <div class = 'ImgGal'>
+    <img class = "myImg" src="https://bit.ly/2LPWRQE" alt="까치살모사">
+    <div class = "ImgGalDesc">
+        까치살모사
+    </div>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div style = "margin-top : 60px;" id="caption"></div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementsByClassName("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    
+    
+    for(i=0; i<img.length; i++)
+    {
+    img[i].onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+    
+
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+
+
+</body>
+
+
+</html>

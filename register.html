@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>회원가입</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function ckpw() {
+      var pw = document.getElementById("PW").value;
+      var pwck = document.getElementById("PW2").value;
+
+      if (pw != pwck) {
+        document.getElementById('pwsame').innerHTML = '비밀번호가 틀렸습니다. 다시 입력해 주세요';
+        return false;
+      }
+    }
+  </script>
+  <form action="register.php" onsubmit="return ckpw()" data-ajax="false" method="post">
+    <h1>회원 가입</h1>
+    <br>이름 <input type="text" name="name" placeholder="이름 입력" required>
+    <br>ID <input type="text" name="id" required>
+    <br>PW <input type="password" id=PW name="pw" required>
+    <br>PW 확인 <input type="password" id=PW2 name="pw2" required>
+    <br>이메일<input type="email" name="email" required>
+    <br>전화번호<input type="tel" name="phone" required>
+    <p id="pwsame" style="color:red;"></p>
+    <br><br>
+    <input type="submit" value="확인">
+  </form>
+</body>
+
+</html>
